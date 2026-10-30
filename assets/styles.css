@@ -265,13 +265,14 @@ cite { font-style: normal; font-weight: 700; color: var(--green); font-size: 0.9
 .board td:first-child { border-left: 1px solid var(--line); border-radius: 12px 0 0 12px; width: 70px; }
 .board td:last-child { border-right: 1px solid var(--line); border-radius: 0 12px 12px 0; text-align: right; }
 .board th:last-child { text-align: right; }
+.board td:last-child { white-space: nowrap; }
 .rank {
   display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%;
   background: var(--mint); color: var(--green); font-weight: 800; font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem;
 }
-.board tr:nth-child(1) .rank { background: #f4c430; color: #5a4300; }
-.board tr:nth-child(2) .rank { background: #cfd6dc; color: #39434b; }
-.board tr:nth-child(3) .rank { background: #d9a074; color: #5a2f10; }
+.board tr[data-rank="1"] .rank { background: #f4c430; color: #5a4300; }
+.board tr[data-rank="2"] .rank { background: #cfd6dc; color: #39434b; }
+.board tr[data-rank="3"] .rank { background: #d9a074; color: #5a2f10; }
 .school { font-weight: 700; }
 .area { display: block; font-size: 0.88rem; color: var(--muted); font-weight: 400; }
 .pts { font-family: 'Barlow Condensed', sans-serif; font-style: italic; font-weight: 800; font-size: 1.8rem; color: var(--green); }
@@ -357,4 +358,7 @@ cite { font-style: normal; font-weight: 700; color: var(--green); font-size: 0.9
   .tablet-wide { min-height: 0; }
   .tablet-wide { flex-direction: column; align-items: flex-start; }
   .logo img { height: 48px; }
+  .board td { padding: 12px 10px; }
+  .board td:first-child { width: 52px; }
+  .pts { font-size: 1.5rem; }
 }
