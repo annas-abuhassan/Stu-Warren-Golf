@@ -1,7 +1,9 @@
 [build]
   publish = "."
 
+# Scripts and styles are referenced with a ?v= version, so browsers can
+# check for changes on every visit without serving stale files.
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
