@@ -320,11 +320,26 @@ cite { font-style: normal; font-weight: 700; color: var(--green); font-size: 0.9
 /* Thanks page */
 .thanks { min-height: calc(100vh - 76px - 110px); display: grid; place-items: center; text-align: center; padding: 64px 20px; }
 
+/* First Swing */
+.steps-3 { grid-template-columns: repeat(3, 1fr); }
+.step .ideal { margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.18); color: var(--neon); font-weight: 600; }
+.seasons { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 32px; }
+.seasons .experience img { aspect-ratio: 16 / 9; }
+.seasons .experience-body > p { color: var(--muted); }
+.seasons .ticks { margin: 0; }
+.features-5 { grid-template-columns: repeat(5, 1fr); }
+.quote-wide { margin-top: 32px; text-align: center; padding: 36px clamp(24px, 6vw, 80px); }
+.quote-wide::before { left: 50%; transform: translateX(-50%); }
+.quote-wide p { font-size: 1.15rem; }
+.board-section + .board-section { margin-top: 48px; }
+
 /* Responsive */
 @media (max-width: 960px) {
   .tablet-grid, .features, .experiences, .quotes, .downloads { grid-template-columns: 1fr 1fr; }
   .tablet-grid > .tablet:first-child { grid-column: 1 / -1; }
   .steps, .stats { grid-template-columns: 1fr 1fr; }
+  .features-5 { grid-template-columns: repeat(3, 1fr); }
+  .steps-3 { grid-template-columns: 1fr; }
   .nav-toggle { display: block; }
   .nav {
     display: none; position: absolute; top: 76px; left: 0; right: 0;
@@ -334,7 +349,7 @@ cite { font-style: normal; font-weight: 700; color: var(--green); font-size: 0.9
   .nav.open { display: flex; }
 }
 @media (max-width: 760px) {
-  .split, .coach-card, .tt-cols { grid-template-columns: 1fr; }
+  .split, .coach-card, .tt-cols, .seasons, .features-5 { grid-template-columns: 1fr; }
   .split-reverse > :first-child { order: 0; }
   .coach-card img { max-width: 220px; }
   .tablet-grid, .features, .experiences, .quotes, .downloads, .form-row { grid-template-columns: 1fr; }

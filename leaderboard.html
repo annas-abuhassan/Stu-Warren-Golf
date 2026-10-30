@@ -38,20 +38,31 @@
         <div class="hero-copy">
           <p class="challenge-line">Can your school beat the nation?</p>
           <h1>Live Leaderboard</h1>
-          <p class="lead">The National Hole-in-One Challenge. Every pupil plays, every pupil contributes, every hole counts.</p>
+          <p class="lead">The National Hole-in-One Challenge for primary schools and the National Putting Challenge for secondary schools. Every pupil plays, every pupil contributes, every hole counts.</p>
         </div>
       </div>
     </section>
 
     <section class="section section-alt">
       <div class="container narrow">
-        <p class="eyebrow">National Hole-in-One Challenge</p>
-        <h2>The table</h2>
-        <table class="board">
-          <thead><tr><th>Rank</th><th>School</th><th>Score</th></tr></thead>
-          <tbody id="board-body"></tbody>
-        </table>
-        <p class="board-note" id="board-updated"></p>
+        <div class="board-section">
+          <p class="eyebrow">Primary · National Hole-in-One Challenge</p>
+          <h2>Primary schools</h2>
+          <table class="board">
+            <thead><tr><th>Rank</th><th>School</th><th>Score</th></tr></thead>
+            <tbody id="board-primary"></tbody>
+          </table>
+          <p class="board-note" id="note-primary"></p>
+        </div>
+        <div class="board-section">
+          <p class="eyebrow">Secondary · First Swing National Putting Challenge</p>
+          <h2>Secondary schools</h2>
+          <table class="board">
+            <thead><tr><th>Rank</th><th>School</th><th>Score</th></tr></thead>
+            <tbody id="board-secondary"></tbody>
+          </table>
+          <p class="board-note" id="note-secondary"></p>
+        </div>
       </div>
     </section>
 
@@ -60,14 +71,15 @@
         <div>
           <p class="eyebrow">How it works</p>
           <h2>Every pupil counts.</h2>
-          <p>During a Primary Golf Experience day, KS1 and KS2 pupils take part in the Hole-in-One Challenge in every game. Their results are combined to create your school's score, which goes straight onto the national leaderboard.</p>
+          <p><strong>Primary:</strong> during a Primary Golf Experience day, KS1 and KS2 pupils take part in the Hole-in-One Challenge in every game. Their results are combined to create your school's score.</p>
+          <p><strong>Secondary:</strong> during First Swing, your school takes 10 scoring shots in a lunchtime putting challenge. Pick your best putters, or use it to involve pupils who don't usually play sport.</p>
           <ul class="ticks">
             <li><strong>Take part</strong>Every pupil gets an opportunity to have a go.</li>
             <li><strong>Score</strong>Successful attempts count towards your school's result.</li>
             <li><strong>Submit</strong>Your school's score enters the national competition.</li>
             <li><strong>Climb</strong>Watch your school move up the leaderboard.</li>
           </ul>
-          <a href="primary.html#book" class="btn btn-green">Get your school on the board</a>
+          <div class="actions"><a href="primary.html#book" class="btn btn-green">Book a primary day</a><a href="secondary.html#book" class="btn btn-green">Book First Swing</a></div>
         </div>
         <div class="photo photo-tall"><img src="assets/images/schools/hole-in-one.jpg" alt="Two pupils celebrating next to a hole-in-one target" loading="lazy"></div>
       </div>
