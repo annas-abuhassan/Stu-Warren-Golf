@@ -32,4 +32,4 @@ The contact form uses [Netlify Forms](https://docs.netlify.com/forms/setup/). Af
 
 ## Domain
 
-The site lives at https://stuwarrengolf.co.uk (DNS on Cloudflare, set to "DNS only" CNAMEs pointing at `stuwarrengolf.netlify.app`). Canonical links, social preview tags and `sitemap.xml` use that domain, so update them if it ever changes.
+The site lives at https://stuwarrengolf.co.uk (DNS on Cloudflare, "DNS only": apex A record `75.2.60.5`, `www` CNAME `stuwarrengolf.netlify.app`). Canonical links, social preview tags and `sitemap.xml` use that domain, so update them if it ever changes.
