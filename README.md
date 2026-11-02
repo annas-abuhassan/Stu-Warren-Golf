@@ -29,3 +29,7 @@ Open `index.html` in a browser, or run `python3 -m http.server` and visit http:/
 In Netlify, choose **Add new site → Import an existing project**, pick this repo and deploy (no build command; `netlify.toml` publishes the repo root).
 
 The contact form uses [Netlify Forms](https://docs.netlify.com/forms/setup/). After the first deploy, enable form detection under **Forms** in the site settings, then add an email notification so submissions go to Stu. There are four forms: `contact`, `primary-enquiry`, `secondary-enquiry` and `workshops-enquiry`.
+
+## Domain
+
+The site lives at https://stuwarrengolf.co.uk (DNS on Cloudflare, set to "DNS only" CNAMEs pointing at `stuwarrengolf.netlify.app`). Canonical links, social preview tags and `sitemap.xml` use that domain, so update them if it ever changes.
