@@ -1,20 +1,35 @@
 # Stu Warren Golf
 
-Website for Stu Warren Golf: golf coaching for professionals, individuals and schools.
+Website for Stu Warren Golf: golf in schools across England.
 
 ## Stack
 
-Plain HTML, CSS and a little JavaScript. No build step, so it can be hosted for free on GitHub Pages, Netlify or Cloudflare Pages.
+Plain HTML, CSS and a little JavaScript with no build step, hosted on Netlify.
 
-- `index.html` – the whole one-page site
+- `index.html` – home page with the four tablet buttons
+- `primary.html` – Primary Golf Experience (brochure content, timetables, meet the coach, booking form)
+- `leaderboard.html` – National Hole-in-One Challenge leaderboard
+- `secondary.html` – First Swing 2027, the secondary schools challenge
+- `workshops.html` – placeholder page until Stu's copy is ready
 - `assets/styles.css` – styles
 - `assets/main.js` – mobile menu
-- `assets/images/` – photos (add Stu's photos here)
+- `assets/timetables.js` – the sample timetable options shown on the primary page
+- `assets/leaderboard.js` – **leaderboard scores (primary and secondary): edit the lists in this file to update the tables**
+- `assets/docs/` – downloadable PDFs (brochure, meet the coach, timetables)
+- `assets/images/` – logo, favicon and photos (school photos taken from Stu's brochure)
+- `thanks.html` – page shown after the contact form is sent
+- `netlify.toml` – Netlify config
 
 ## Preview locally
 
 Open `index.html` in a browser, or run `python3 -m http.server` and visit http://localhost:8000.
 
-## Placeholders
+## Deploying on Netlify
 
-Anything in `[square brackets]` is placeholder content still to be replaced with Stu's real details.
+In Netlify, choose **Add new site → Import an existing project**, pick this repo and deploy (no build command; `netlify.toml` publishes the repo root).
+
+The contact form uses [Netlify Forms](https://docs.netlify.com/forms/setup/). After the first deploy, enable form detection under **Forms** in the site settings, then add an email notification so submissions go to Stu. There are four forms: `contact`, `primary-enquiry`, `secondary-enquiry` and `workshops-enquiry`.
+
+## Domain
+
+The site lives at https://stuwarrengolf.co.uk (DNS on Cloudflare, set to "DNS only" CNAMEs pointing at `stuwarrengolf.netlify.app`). Canonical links, social preview tags and `sitemap.xml` use that domain, so update them if it ever changes.
